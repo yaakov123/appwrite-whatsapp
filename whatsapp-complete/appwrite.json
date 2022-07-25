@@ -1,0 +1,29 @@
+{
+  "projectId": "62dd4ad0bf4167370d5c",
+  "projectName": "whatsapp",
+  "collections": [
+    {
+      "$id": "62dd4ae46b29ea8bf3c1",
+      "$createdAt": 1658669796,
+      "$updatedAt": 1658671597,
+      "$read": [],
+      "$write": [],
+      "databaseId": "62dd4add1c4f79215863",
+      "name": "message",
+      "enabled": true,
+      "permission": "document",
+      "attributes": [
+        {
+          "key": "content",
+          "type": "string",
+          "status": "available",
+          "required": false,
+          "array": false,
+          "size": 8000,
+          "default": null
+        }
+      ],
+      "indexes": []
+    }
+  ]
+}
