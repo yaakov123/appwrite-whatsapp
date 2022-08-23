@@ -4,7 +4,7 @@
     <div class="mt-1">
       <input
         :type="type"
-        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+        class="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
         :placeholder="placeholder"
         v-model="model"
         @input="$emit('update:modelValue', model)"

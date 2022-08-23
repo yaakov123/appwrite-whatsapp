@@ -1,27 +1,33 @@
 <template>
-  <main class="flex items-center justify-center w-full h-full">
-    <div class="flex-col">
-      <h1 class="text-2xl">Login to your account</h1>
-      <router-link to="/register" class="text-xs text-blue-700"
-        >Create account</router-link
-      >
-      <div class="mt-8 space-y-4">
-        <Input
-          type="email"
-          placeholder="someone@somewhere.com"
-          label="Email"
-          v-model="email"
-        />
-        <Input
-          type="password"
-          placeholder="Password"
-          label="Password"
-          v-model="password"
-        />
-      </div>
-      <Button text="Login" class="mt-4" @click="login"></Button>
+  <section class="w-full h-full flex flex-col items-center justify-center">
+    <div class="w-80 flex flex-col items-center">
+      <img :src="whatsapp" class="w-24" />
+
+      <h1 class="text-3xl mt-2 font-bold">Login to your account</h1>
+      <p class="text-sm text-gray-500 mt-1">
+        Or
+        <span class="text-green-500"
+          ><router-link to="/register">create a new one</router-link></span
+        >
+      </p>
+
+      <Input
+        type="text"
+        label="Email"
+        placeholder="someone@gmail.com"
+        class="w-full mt-10"
+        ref="email"
+      />
+      <Input
+        type="password"
+        label="Password"
+        placeholder="Password here..."
+        class="w-full mt-5"
+        ref="password"
+      />
+      <Button text="Login" class="mt-10 w-full" @click="login"></Button>
     </div>
-  </main>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -30,6 +36,7 @@ import { useRouter } from "vue-router";
 import { account } from "../api";
 import Input from "../components/Input.vue";
 import Button from "../components/Button.vue";
+import whatsapp from "../assets/whatsapp.webp";
 
 const email = ref("");
 const password = ref("");
