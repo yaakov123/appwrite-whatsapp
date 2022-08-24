@@ -1,19 +1,12 @@
 <template>
-  <h1>Welcome</h1>
+  <main class="w-screen h-screen bg-gray-100 flex">
+    <RouterView></RouterView>
+  </main>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { account } from "./api";
 
-onMounted(() => {
-  // account.create("unique()", "me@example.com", "password", "Jane Doe").then(
-  //   (response) => {
-  //     console.log(response);
-  //   },
-  //   (error) => {
-  //     console.log(error);
-  //   }
-  // );
-});
+onMounted(() => {});
 </script>
