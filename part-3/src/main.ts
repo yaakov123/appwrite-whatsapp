@@ -6,6 +6,7 @@ import Login from "./pages/Login.vue";
 import Register from "./pages/Register.vue";
 import Application from "./pages/Application.vue";
 import { account } from "./api/index";
+import { createPinia } from "pinia";
 
 const routes: RouteRecordRaw[] = [
   { path: "/login", component: Login, name: "login" },
@@ -36,4 +37,5 @@ router.beforeEach(async (to, from, next) => {
   next();
 });
 
-createApp(App).use(router).mount("#app");
+const pinia = createPinia();
+createApp(App).use(router).use(pinia).mount("#app");
