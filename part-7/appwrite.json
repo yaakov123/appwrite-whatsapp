@@ -1,0 +1,94 @@
+{
+    "projectId": "633bf2f1031a36934a19",
+    "projectName": "whatsapp1",
+    "functions": [
+        {
+            "$id": "6330202fdc5b24c95c22",
+            "name": "addMembers",
+            "runtime": "node-16.0",
+            "path": "functions/addMembers",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [
+                "any"
+            ],
+            "events": [],
+            "schedule": "",
+            "timeout": 15,
+            "variables": {
+                "APPWRITE_FUNCTION_ENDPOINT": "http://192.168.150.166/v1",
+                "APPWRITE_FUNCTION_API_KEY": "f93ed799cfc98a3433fb912bf10f520e7e12309fc029ec5af4182a8f555658e346bafb4ddab7e251582d77d629ae4f35a23db7c0dae444f3e6896d7572a61cc10570347a744aac9e6157275606a8afbb960a52a1f15a883e5577cc70b428527f61a86b24be7ec6d9987727cd88ab9f2632783d3dabb6340c95b53ca52df7b65e"
+            }
+        }
+    ],
+    "collections": [
+        {
+            "$id": "contacts",
+            "$createdAt": "2022-10-04T09:09:47.008+00:00",
+            "$updatedAt": "2022-10-04T09:09:47.008+00:00",
+            "$permissions": [],
+            "databaseId": "whatsapp",
+            "name": "contacts",
+            "enabled": true,
+            "documentSecurity": false,
+            "attributes": [
+                {
+                    "key": "user_id",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 255,
+                    "default": null
+                },
+                {
+                    "key": "contact_id",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 255,
+                    "default": null
+                },
+                {
+                    "key": "email",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "format": "email",
+                    "default": null
+                }
+            ],
+            "indexes": [
+                {
+                    "key": "user_contact",
+                    "type": "unique",
+                    "status": "available",
+                    "attributes": [
+                        "user_id",
+                        "contact_id"
+                    ],
+                    "orders": [
+                        "ASC",
+                        "ASC"
+                    ]
+                },
+                {
+                    "key": "user_id",
+                    "type": "key",
+                    "status": "available",
+                    "attributes": [
+                        "user_id"
+                    ],
+                    "orders": [
+                        "ASC"
+                    ]
+                }
+            ]
+        }
+    ]
+}

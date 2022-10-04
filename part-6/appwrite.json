@@ -1,0 +1,21 @@
+{
+    "projectId": "630d0d8955f7e8abcd75",
+    "projectName": "whatsapp",
+    "functions": [
+        {
+            "$id": "6330202fdc5b24c95c22",
+            "name": "addMembers",
+            "runtime": "node-16.0",
+            "path": "functions/addMembers",
+            "entrypoint": "src/index.js",
+            "ignore": [
+                "node_modules",
+                ".npm"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
+    ]
+}
